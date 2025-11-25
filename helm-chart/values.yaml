@@ -8,7 +8,7 @@ webapp:
     fqdn: cisl-slas.k8s.ucar.edu
     secretName: cisl-sla-website-ssl
   container: 
-    image: hub.k8s.ucar.edu/cisl/cisl-sla-image:2025-11-24.23.40
+    image: hub.k8s.ucar.edu/cisl/cisl-sla-image:v1
     port: 5000
     memory: 1G
     cpu: 2
