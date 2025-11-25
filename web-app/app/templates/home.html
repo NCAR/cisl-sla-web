@@ -9,12 +9,35 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="hero-title">CISL Flask Template</h1>
+                    <h1 class="hero-title">CISL Service Level Agreements (SLAs)</h1>
                     <p class="hero-description">
-                        A template built on Flask for CISL Websites. This maintains a similar look and feel to the <a href="cisl.ucar.edu">cisl.ucar.edu</a> homepage
+                        Find service level commitments for CISL services including availability targets, support response times, and maintenance windows. These SLAs clarify what you can expect when using our HPC systems, data services, and application support.
                     </p>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="sla-container">
+        <div class="row g-4">
+            {% for sla in slas %}
+            <div class="col-md-6 col-lg-4">
+                <a href="{{ sla.service_sla_link }}" class="sla-card" target="_blank">
+                    {% if sla.service_logo %}
+                    <img src="{{ url_for('static', filename=sla.service_logo.replace('static/', '')) }}" 
+                         alt="{{ sla.service_name }} logo" 
+                         class="sla-logo">
+                    {% endif %}
+                    <h5>{{ sla.service_name }}</h5>
+                    {% if sla.service_description %}
+                    <p>{{ sla.service_description }}</p>
+                    {% endif %}
+                    <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

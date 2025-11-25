@@ -1,0 +1,20 @@
+slas:
+  - service_name: Casper
+    service_logo: static/logos/Casper_Logo.png
+    service_description: Data analysis and visualization cluster
+    service_sla_link: https://ncar-hpc-docs.readthedocs.io/en/latest/compute-systems/casper/casper-use-policies/
+
+  - service_name: CIRRUS
+    service_logo: static/logos/CIRRUS_Logo.png
+    service_description: Cloud-native platform
+    service_sla_link: https://ncar-hpc-docs.readthedocs.io/en/latest/compute-systems/cirrus/guides/09-service-level-agreements/slas/
+  
+  - service_name: Derecho
+    service_logo: static/logos/Derecho_Logo.png
+    service_description: High-performance computing system
+    service_sla_link: https://ncar-hpc-docs.readthedocs.io/en/latest/compute-systems/derecho/derecho-use-policies/
+  
+  - service_name: Geoscience Data Exchange (GDEX)
+    service_logo: static/logos/GDEX_Logo.png
+    service_description: Trusted platform for Earth science data sharing and stewardship
+    service_sla_link: https://gdex.ucar.edu/support/about-gdex/

@@ -1,10 +1,15 @@
-from flask import render_template
 from app import app
+from flask import render_template
+import os
+import yaml
 
 @app.route('/')
 def home():
-    return render_template('home.html')
-
-@app.route('/templates/navbar.html')
-def navbar():
-    return render_template('navbar.html')
+    yaml_path = '/app/web-app/slas.yaml'
+    
+    with open(yaml_path, 'r') as file:
+        data = yaml.safe_load(file)
+    
+    slas = data.get('slas', [])
+    
+    return render_template('home.html', slas=slas)
