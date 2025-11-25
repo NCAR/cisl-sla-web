@@ -1,0 +1,147 @@
+<!-- templates/navbar.html -->
+<!-- Top utility bar -->
+<div class="top-utility-bar">
+    <div class="container-lg">
+        <div class="row align-items-center py-2">
+            <div class="col-md-7 d-flex align-items-center">
+                <div class="nsf-logo pe-3">
+                    <a href="https://nsf.gov" title="U.S. NSF Home">
+                        <img src="{{ url_for('static', filename='NSF_Official_logo.png') }}" 
+                             alt="U.S. NSF Logo">
+                    </a>
+                </div>
+                <div class="ncar-logo ps-2">
+                    <a href="https://ncar.ucar.edu">
+                        <img src="{{ url_for('static', filename='logo-ncar.png') }}" 
+                             alt="NSF NCAR Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5 d-none d-md-flex justify-content-end align-items-center">
+                <a href="https://www.cisl.ucar.edu/form/contact" class="me-3">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main navigation -->
+<div class="navbar-wrapper border-top">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-lg">
+            <div class="site-name mx-3 mx-md-0 my-2">
+                <a href="/">Computational and Information Systems Lab</a>
+            </div>
+            
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#mainNav" 
+                    aria-controls="mainNav" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown d-flex flex-wrap align-items-center">
+                        <a class="nav-link" href="https://www.cisl.ucar.edu/about">About</a>
+                        <button id="about" 
+                                class="btn dropdown-toggle px-3 px-md-0 mx-md-1" 
+                                type="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                                aria-label="Expand/Collapse About">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="about">
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/about/cisl-mission">Mission</a></li>
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/people">People</a></li>
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/about/directors-office">Director's Office</a></li>
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/about/facilities">Facilities</a></li>
+                            <li><a class="dropdown-item" href="https://ucar.wd5.myworkdayjobs.com/UCAR_Careers" target="_blank">Careers</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown d-flex flex-wrap align-items-center">
+                        <a class="nav-link" href="https://www.cisl.ucar.edu/capabilities">Capabilities</a>
+                        <button id="capabilities" 
+                                class="btn dropdown-toggle px-3 px-md-0 mx-md-1" 
+                                type="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                                aria-label="Expand/Collapse Capabilities">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="capabilities">
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/capabilities/supercomputing">Computing</a></li>
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/data">Data</a></li>
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/software">Software</a></li>
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/capabilities/cisl-visualization-assistance">Visualization</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown d-flex flex-wrap align-items-center">
+                        <a class="nav-link" href="https://www.cisl.ucar.edu/impacts">Impacts</a>
+                        <button id="impacts" 
+                                class="btn dropdown-toggle px-3 px-md-0 mx-md-1" 
+                                type="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                                aria-label="Expand/Collapse Impacts">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="impacts">
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/research-software/projects-cisl">Projects</a></li>
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/impacts/publications">Publications</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown d-flex flex-wrap align-items-center">
+                        <a class="nav-link" href="#">Outreach&nbsp;&&nbsp;Education</a>
+                        <button id="outreach-education" 
+                                class="btn dropdown-toggle px-3 px-md-0 mx-md-1" 
+                                type="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                                aria-label="Expand/Collapse Outreach & Education">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="outreach-education">
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/outreach/community-outreach">Community Outreach</a></li>
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/outreach/resources">Educational Resources</a></li>
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/outreach/internships">Internships</a></li>
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/outreach/cvp">Visitor Program</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown d-flex flex-wrap">
+                        <a class="nav-link" href="https://www.cisl.ucar.edu/what-we-do/cisl-learning-center">Learning&nbsp;Center</a>
+                        <button id="learning-center" 
+                                class="btn dropdown-toggle px-3 px-md-0 mx-md-1" 
+                                type="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                                aria-label="Expand/Collapse Learning Center">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="learning-center">
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/what-we-do/training-library">Training for HPC Users</a></li>
+                            <li><a class="dropdown-item" href="https://projectpythia.org/" target="_blank">Learning About Python</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown d-flex flex-wrap">
+                        <span class="nav-link">News&nbsp;&&nbsp;Events</span>
+                        <button id="news-events" 
+                                class="btn dropdown-toggle px-3 px-md-0 mx-md-1" 
+                                type="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                                aria-label="Expand/Collapse News & Events">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="news-events">
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/news">News</a></li>
+                            <li><a class="dropdown-item" href="https://www.cisl.ucar.edu/events">Events</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
