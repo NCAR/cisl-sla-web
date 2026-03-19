@@ -22,9 +22,9 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-image: url("images/NCAR-Waves.png") !important;
-    background-position: right top !important;
-    background-repeat: no-repeat !important;
-    background-color: #F1F0EE !important;
+    background-position: 150% 0%;
+    background-repeat: repeat-y;
+    background-size: 53%;
 }
 
 main {
@@ -45,8 +45,9 @@ main {
 .top-utility-bar {
     background-color: #f8f9fa;
     border-bottom: 1px solid #dee2e6;
-    font-size: 0.9rem;
-    height: 98px;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    height: 122px;
     display: flex;
     align-items: center;
 }
@@ -62,7 +63,7 @@ main {
 }
 
 .top-utility-bar a {
-    color: #1a658f;
+    color: #0057c2;
     text-decoration: none;
     transition: var(--transition);
     font-weight: 600;
@@ -96,7 +97,7 @@ main {
 @media (min-width: 64rem) {
     .ncar-logo {
         border-left: 0.0755rem solid #58595b;
-        width: 9rem;
+        width: 235px;
     }
 }
 
@@ -111,16 +112,16 @@ main {
 
 /* ===== NAVBAR ===== */
 .navbar-wrapper {
-    background-color: var(--ncar-gray-light);
+    background-color: #f8f9fa;
     border-top: 1px solid #c0c0bd;
-    height: 97px;
+    height: 37px;
     display: flex;
     align-items: center;
 }
 
 @media (min-width: 64rem) {
     .navbar-wrapper {
-        background-color: var(--ncar-gray-light);
+        background-color: #f8f9fa;
     }
 }
 
@@ -159,11 +160,12 @@ main {
 }
 
 .navbar .site-name {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
     padding-right: 1.875rem;
     width: 333.97px;
+    margin-left: 1.875rem !important;
 }
 
 @media (min-width: 64rem) {
@@ -173,9 +175,10 @@ main {
 }
 
 .navbar .site-name a {
-    color: var(--text-dark);
+    color: #0057c2;
     text-decoration: none;
     transition: var(--transition);
+    margin-left: 1.875rem !important;
 }
 
 .navbar .site-name a:hover {
@@ -261,7 +264,7 @@ main {
     padding-bottom: 1.875rem;
     padding-left: 1.875rem;
     padding-top: 1.875rem;
-    color: #00357A !important;
+    color: #011837 !important;
     transition: var(--transition);
     border-bottom: 3px solid transparent;
     border-left: none;
@@ -275,9 +278,8 @@ main {
 }
 
 .navbar .nav-link:hover {
-    color: var(--ncar-blue) !important;
+    color: #0057c2 !important;
     background-color: #ffffff;
-    border-bottom-color: var(--ncar-blue);
 }
 
 .navbar .nav-link.dropdown-toggle::after {
@@ -304,6 +306,7 @@ main {
 .my-2 {
     margin-top: 1.125rem !important;
     margin-bottom: 1.125rem !important;
+    width: 
 }
 
 .dropdown-menu {
@@ -454,16 +457,17 @@ main {
 .org-footer h3 {
     font-size: 1.5rem;
     line-height: 2.25rem;
+    color: #fdd509 !important;
 }
 
 .org-footer h4 {
-    color: #ffffff;
+    color: #fdd509 !important;
     font-size: 1rem;
     font-weight: 600;
 }
 
 .org-footer .nav-link {
-    color: #c3d7ee;
+    color: #42c0ff !important;
     text-decoration: none;
     transition: var(--transition);
     font-size: 0.875rem;
@@ -472,7 +476,7 @@ main {
 }
 
 .org-footer .nav-link:hover {
-    color: #00c1d5;
+    color: #86d3fc !important;
     border-bottom-color: transparent;
 }
 
@@ -491,7 +495,7 @@ main {
 }
 
 .legal-footer .nav-link {
-    color: #c3d7ee;
+    color: #f6f7f6 !important;
     text-decoration: none;
     transition: var(--transition);
     font-size: 0.875rem;
@@ -503,7 +507,7 @@ main {
 }
 
 .legal-footer .nav-link:hover {
-    color: #00c1d5;
+    color: #42c0ff !important;
     border-bottom-color: transparent;
 }
 
@@ -555,21 +559,27 @@ main {
 }
 
 .social-icons a {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(255, 255, 255);
     transition: var(--transition);
 }
 
+.social a {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+
 .social-icons a:hover {
-    color: #ffffff;
+    color: #86d3fc !important;
 }
 
 .legal-footer {
-    background-color: #252525;
+    background-color: #00357a;
     color: rgba(255, 255, 255, 0.7);
     text-align: left;
 }
 
 .legal-footer .copyright {
+    color: #fdd509 !important;
     float: left;
     line-height: unset;
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
@@ -582,9 +592,13 @@ main {
 }
 
 .nsf-footer {
-    background-color: #ffffff;
+    background-color: #556379;
     font-size: 1rem;
     line-height: 1.5rem;
+}
+
+.nsf-footer p {
+    color: #f6f7f6 !important;
 }
 
 .nsf-footer img {
@@ -593,13 +607,13 @@ main {
 }
 
 .nsf-footer a {
-    color: var(--ncar-blue);
-    text-decoration: none;
+    color: #c0f0f5 !important;
+    text-decoration: underline;
     transition: var(--transition);
 }
 
 .nsf-footer a:hover {
-    color: var(--ncar-blue-dark);
+    color: #86e8f5 !important;
     text-decoration: underline;
 }
 
